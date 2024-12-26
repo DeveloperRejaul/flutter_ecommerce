@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecommerce/api/todos.dart';
 import 'package:shadcn_ui/shadcn_ui.dart';
 
 class HomePage extends StatefulWidget {
@@ -25,6 +26,14 @@ class _HomePageState extends State<HomePage> {
           "Yes. It's animated by default, but you can disable it if you prefer.",
     ),
   ];
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    getHttp();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
